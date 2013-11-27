@@ -1,10 +1,11 @@
 :root {
   /* ---------- colors ---------- */
+  var-highlight-color  : #fff;
+  var-shadow-color     : #000;
+
   var-color            : #c6c8c8;
   var-background-color : #595b5b;
   var-background--body : #4B4D4E;
-  var-highlight-color  : #fff;
-  var-shadow-color     : #000;
 
   /* ---------- darken ---------- */
   var-dark    : 5;
@@ -27,6 +28,20 @@
   /* ---------- shadows ---------- */
   var-box-shadow--highlight : 0 -1px rgba( 0, 0, 0, 0.69 );
 
+  /*
+   * Parts of the Topcoat themed elements:
+   * 1. base color
+   * 2. text color *needs to be a contrast ratio of 7:1 for AAA compliance 4.5:1 for AA
+   * 3. text shadow
+   * 4. outer border color
+   * 5. inner highlight color *uses box-shadow for this
+   * 6. drop shadow color *uses box-shadow
+   * 7. active base color
+   * 8. down base color
+   * 9. focus ring
+   *    a. outer focus border color
+   *    b. inner active border color
+   */
   var-background-color--down : darken(var(background--body), var(dark));
   var-background-color--hover : lighten(var(background--body), var(lighter));
   var-border : var(border-thickness) solid var(border-color);
